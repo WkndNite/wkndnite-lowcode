@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-20 pb-20 pl-20 pr-20">
-    <h1 class="font-weight-100 text-center">周末晚的问卷系统</h1>
+    <h1 class="font-weight-100 text-center">周末晚的问卷低代码平台</h1>
     <div class="mb-15">
       <el-button
         type="primary"
