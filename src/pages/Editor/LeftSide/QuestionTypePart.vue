@@ -1,6 +1,10 @@
 <template>
   <div class="survey-type-container">
-    <QuestionTypeGroup v-for="(item, index) in EditorQuestionTypeList" :key="index" v-bind="item" />
+    <QuestionTypeGroup
+      v-for="(item, index) in EditorQuestionTypeList"
+      :key="index"
+      v-bind="item"
+    />
   </div>
 </template>
 

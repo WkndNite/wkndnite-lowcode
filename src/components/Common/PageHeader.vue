@@ -2,25 +2,53 @@
   <div>
     <div class="container flex self-start align-items-center border-box">
       <div class="left flex justify-content-center align-items-center">
-        <el-button :icon="ArrowLeft" circle size="small" @click="goHome" />
+        <el-button
+          :icon="ArrowLeft"
+          circle
+          size="small"
+          @click="goHome"
+        />
       </div>
       <div class="center flex align-items-center space-between pl-15 pr-15">
         <div v-if="isEditor">
           <div v-if="pathId">
-            <el-button type="warning" size="small" @click="updateQuestionnaire">更新问卷</el-button>
+            <el-button
+              type="warning"
+              size="small"
+              @click="updateQuestionnaire"
+              >更新问卷</el-button
+            >
           </div>
           <div v-else>
-            <el-button type="danger" size="small" @click="resetQuestionnaire">重置问卷</el-button>
-            <el-button type="success" size="small" @click="saveQuestionnaire">保存问卷</el-button>
+            <el-button
+              type="danger"
+              size="small"
+              @click="resetQuestionnaire"
+              >重置问卷</el-button
+            >
+            <el-button
+              type="success"
+              size="small"
+              @click="saveQuestionnaire"
+              >保存问卷</el-button
+            >
           </div>
         </div>
 
         <div v-if="pathId">
-          <el-button type="primary" size="small" @click="gotoPreview">预览</el-button>
+          <el-button
+            type="primary"
+            size="small"
+            @click="gotoPreview"
+            >预览</el-button
+          >
         </div>
       </div>
       <div class="right flex justify-content-center align-items-center">
-        <el-avatar :size="30" :src="avatar" />
+        <el-avatar
+          :size="30"
+          :src="avatar"
+        />
       </div>
     </div>
   </div>

@@ -2,7 +2,11 @@
   <div key="id">
     <div class="mb-10">
       <div class="mb-10">标题内容</div>
-      <el-input placeholder="请输入标题内容" v-model="text" @update:modelValue="inputHandle" />
+      <el-input
+        placeholder="请输入标题内容"
+        v-model="text"
+        @update:modelValue="inputHandle"
+      />
     </div>
   </div>
 </template>

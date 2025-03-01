@@ -1,6 +1,10 @@
 <template>
   <div v-if="store.questionsCount">
-    <draggable v-model="store.components" item-key="index" @start="startDragHandle">
+    <draggable
+      v-model="store.components"
+      item-key="index"
+      @start="startDragHandle"
+    >
       <template #item="{ element, index }">
         <div
           class="mb-10"
@@ -22,7 +26,12 @@
       </template>
     </draggable>
   </div>
-  <div v-else class="tip flex align-items-center justify-content-center">请添加题目</div>
+  <div
+    v-else
+    class="tip flex align-items-center justify-content-center"
+  >
+    请添加题目
+  </div>
 </template>
 
 <script setup lang="ts">

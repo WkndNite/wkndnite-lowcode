@@ -1,6 +1,13 @@
 <template>
-  <div class="center-container" ref="centerContainer">
-    <draggable v-model="store.components" item-key="index" @start="startDragHandle">
+  <div
+    class="center-container"
+    ref="centerContainer"
+  >
+    <draggable
+      v-model="store.components"
+      item-key="index"
+      @start="startDragHandle"
+    >
       <template #item="{ element, index }">
         <div
           class="content mb-10 relative"
@@ -9,8 +16,15 @@
           :key="element.id"
           :ref="(el) => (componentsRefs[index] = el)"
         >
-          <component :is="element.type" :status="element.status" :serialNum="serialNumber[index]" />
-          <div class="absolute delete-btn" v-if="store.currentFocusedComponentIndex === index">
+          <component
+            :is="element.type"
+            :status="element.status"
+            :serialNum="serialNumber[index]"
+          />
+          <div
+            class="absolute delete-btn"
+            v-if="store.currentFocusedComponentIndex === index"
+          >
             <el-button
               type="danger"
               size="small"

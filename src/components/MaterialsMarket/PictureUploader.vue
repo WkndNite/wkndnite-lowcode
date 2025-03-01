@@ -10,7 +10,11 @@
           :onSuccess="successHandle"
           :before-upload="beforeUploadHandle"
         >
-          <img :src="imageUrl" class="pic" v-if="imageUrl" />
+          <img
+            :src="imageUrl"
+            class="pic"
+            v-if="imageUrl"
+          />
           <div v-else>
             <el-icon><Upload /> </el-icon>
             添加图片

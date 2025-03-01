@@ -11,7 +11,11 @@
         </el-icon>
         <span class="tab-item-title mt-5"> 题型 </span>
       </div>
-      <div class="tab-item" :class="{ 'tab-show': routeName === 'outline' }" @click="goToOutline">
+      <div
+        class="tab-item"
+        :class="{ 'tab-show': routeName === 'outline' }"
+        @click="goToOutline"
+      >
         <el-icon>
           <Document />
         </el-icon>

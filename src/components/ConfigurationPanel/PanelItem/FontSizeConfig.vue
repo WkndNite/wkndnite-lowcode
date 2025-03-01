@@ -11,13 +11,28 @@
           }"
           @click="changeSize(0)"
         >
-          <font-awesome-icon icon="font" size="lg" />
+          <font-awesome-icon
+            icon="font"
+            size="lg"
+          />
         </el-button>
-        <el-button :class="{ select: currentStatus === 1 }" @click="changeSize(1)">
-          <font-awesome-icon icon="font" size="sm" />
+        <el-button
+          :class="{ select: currentStatus === 1 }"
+          @click="changeSize(1)"
+        >
+          <font-awesome-icon
+            icon="font"
+            size="sm"
+          />
         </el-button>
-        <el-button :class="{ select: currentStatus === 2 }" @click="changeSize(2)">
-          <font-awesome-icon icon="font" size="xs" />
+        <el-button
+          :class="{ select: currentStatus === 2 }"
+          @click="changeSize(2)"
+        >
+          <font-awesome-icon
+            icon="font"
+            size="xs"
+          />
         </el-button>
       </el-button-group>
     </ButtonGroup>

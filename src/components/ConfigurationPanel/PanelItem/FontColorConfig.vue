@@ -1,6 +1,9 @@
 <template>
   <div>
-    <ButtonGroup :title="`${configKey === 'titleSize' ? '标题' : '描述'}字色`" :status="status">
+    <ButtonGroup
+      :title="`${configKey === 'titleSize' ? '标题' : '描述'}字色`"
+      :status="status"
+    >
       1
       <el-color-picker
         v-model="currentFontColor"

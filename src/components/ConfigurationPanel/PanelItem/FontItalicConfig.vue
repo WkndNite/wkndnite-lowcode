@@ -11,10 +11,19 @@
           }"
           @click="changeFontItalic(0)"
         >
-          <font-awesome-icon icon="italic" size="lg" />
+          <font-awesome-icon
+            icon="italic"
+            size="lg"
+          />
         </el-button>
-        <el-button :class="{ select: currentStatus === 1 }" @click="changeFontItalic(1)">
-          <font-awesome-icon icon="italic" size="sm" />
+        <el-button
+          :class="{ select: currentStatus === 1 }"
+          @click="changeFontItalic(1)"
+        >
+          <font-awesome-icon
+            icon="italic"
+            size="sm"
+          />
         </el-button>
       </el-button-group>
     </ButtonGroup>
