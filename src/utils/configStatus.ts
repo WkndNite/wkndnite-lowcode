@@ -11,6 +11,7 @@ import {
   type MaterialType,
   type OptionalProps,
   type TextProps,
+  type VueComponentType,
 } from '@/types';
 
 export function getTextStatusConfig(props: TextProps) {
@@ -172,8 +173,10 @@ export function restoreComponentStatus(componentsArray: MaterialType[]) {
     const name = component.name as AllName;
     component.type = materialsMap[name];
     for (const key in component.status) {
-      const status = component.status;
-      const name = status[key].name;
+      const status = component.status as unknown as {
+        [key: string]: { name: string; editComponent?: VueComponentType };
+      };
+      const name = status[key].name as AllName;
       status[key].editComponent = materialsMap[name];
     }
   });

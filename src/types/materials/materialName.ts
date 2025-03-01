@@ -1,4 +1,9 @@
-export type SelectType = 'single-select' | 'single-picture-select' | 'multiple-select';
+export type SelectType =
+  | 'single-select'
+  | 'single-picture-select'
+  | 'multiple-select'
+  | 'multiple-picture-select'
+  | 'drop-down-select';
 
 export type PersonalType =
   | 'personal-gender'
@@ -18,7 +23,10 @@ export type PersonalType =
   | 'personal-industry'
   | 'personal-company'
   | 'personal-position';
-export type QuestionType = SelectType | PersonalType;
+export type InputType = 'text-input';
+export type AdvancedType = 'rate-evaluate' | 'time-picker';
+
+export type QuestionType = SelectType | PersonalType | InputType | AdvancedType;
 
 export type RemarkType = 'remark-note';
 export type NonQuestionType = RemarkType;

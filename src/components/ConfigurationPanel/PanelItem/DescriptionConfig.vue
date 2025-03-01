@@ -14,7 +14,7 @@
 
 <script setup lang="ts">
 import { ref, inject } from 'vue';
-import type { UpdateStatus, VueComponentType } from '@/types';
+import type { updateConfigStatus, VueComponentType } from '@/types';
 
 const props = defineProps<{
   status: string;
@@ -25,7 +25,7 @@ const props = defineProps<{
 }>();
 
 const text = ref(props.status);
-const updateStatus = inject<UpdateStatus>('updateStatus');
+const updateStatus = inject<updateConfigStatus>('updateStatus');
 
 const inputHandle = (val: string) => {
   if (updateStatus) {

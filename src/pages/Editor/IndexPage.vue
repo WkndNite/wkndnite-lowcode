@@ -34,7 +34,6 @@ import { useEditorStore } from '@/stores/useEditor';
 import { getQuestionnaireById } from '@/db/operations';
 import { restoreComponentStatus } from '@/utils';
 import { isRateEvaluateObject } from '../../types/materials/optionPropsArrayType';
-import { setOptionsByIndex } from '../../stores/actions';
 
 const route = useRoute();
 const store = useEditorStore();

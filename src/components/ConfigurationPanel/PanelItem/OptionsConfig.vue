@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import { Plus, Minus } from '@element-plus/icons-vue';
 import { ref, inject } from 'vue';
-import type { UpdateStatus, VueComponentType } from '@/types';
+import type { updateConfigStatus, VueComponentType } from '@/types';
 const props = defineProps<{
   status: Array<string>;
   isShow: boolean;
@@ -41,7 +41,7 @@ const props = defineProps<{
   editComponent: VueComponentType;
   id: string;
 }>();
-const updateStatus = inject<UpdateStatus>('updateStatus');
+const updateStatus = inject<updateConfigStatus>('updateStatus');
 const addOptionHandle = () => {
   if (updateStatus) {
     updateStatus(props.configKey);

@@ -42,7 +42,7 @@ const initResult: { [key: string]: MaterialType } = {};
 
 keyToInitStatus.forEach((key) => {
   const oldStatus = defaultStatusMap[key]();
-  const newStatus = initOptionsOfPresetMaterial(oldStatus, key);
+  const newStatus = initOptionsOfPresetMaterial(oldStatus as MaterialType, key);
   initResult[key] = newStatus;
 });
 

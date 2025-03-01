@@ -60,14 +60,14 @@
 </template>
 
 <script setup lang="ts">
-import type { PicTitleDescStatusArr, UpdateStatus, VueComponentType } from '@/types';
+import type { PictureOptionsArray, updateConfigStatus, VueComponentType } from '@/types';
 import { Plus, Minus } from '@element-plus/icons-vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { ref, inject } from 'vue';
 
 const props = defineProps<{
   currentStatus: number;
-  status: PicTitleDescStatusArr;
+  status: PictureOptionsArray;
   isShow: boolean;
   configKey: string;
   editComponent: VueComponentType;
@@ -76,7 +76,7 @@ const props = defineProps<{
 
 const textArr = ref(props.status);
 
-const updateStatus = inject<UpdateStatus>('updateStatus');
+const updateStatus = inject<updateConfigStatus>('updateStatus');
 
 const addOptionHandle = () => {
   if (updateStatus) {

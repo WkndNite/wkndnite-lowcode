@@ -145,7 +145,7 @@ const dialogueVisible = ref(false);
 .preview-container {
   width: 100vw;
   min-height: 100vh;
-  background: url('@/assets/imgs/editor_background.png');
+  background: url('@/assets/img/editor_background.png');
 }
 .center {
   width: 800px;

@@ -19,14 +19,22 @@
     />
   </div>
   <div class="flex wrap">
-    <el-checkbox-group v-model="checkboxValue" @click.stop @change="emitAnswer" class="flex wrap">
+    <el-checkbox-group
+      v-model="checkboxValue"
+      @click.stop
+      @change="emitAnswer"
+      class="flex wrap"
+    >
       <el-checkbox
         v-for="(item, index) in computedStatus.options"
         :key="index"
         :value="item.picTitle"
         class="picOption flex mb-15"
       >
-        <PictureUploader :key="index" v-bind="{ ...item, index }" />
+        <PictureUploader
+          :key="index"
+          v-bind="{ ...item, index }"
+        />
       </el-checkbox>
     </el-checkbox-group>
   </div>
