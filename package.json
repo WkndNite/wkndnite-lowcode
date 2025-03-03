@@ -10,7 +10,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "prepare": "husky && husky install"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
@@ -29,6 +30,8 @@
     "vuedraggable": "4.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.4",
     "@vitejs/plugin-vue": "^5.2.1",
@@ -38,7 +41,9 @@
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.20.1",
     "eslint-plugin-vue": "^9.32.0",
+    "husky": "^8.0.0",
     "jiti": "^2.4.2",
+    "lint-staged": "^15.4.3",
     "npm-run-all2": "^7.0.2",
     "prettier": "^3.5.1",
     "sass-embedded": "^1.85.0",
@@ -46,5 +51,17 @@
     "vite": "^6.1.0",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vue-tsc": "^2.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

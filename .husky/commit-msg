@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# 运行 commitlint 进行提交信息检查
+npx --no -- commitlint --edit "$1"
+npx --no -- commitlint --edit \
