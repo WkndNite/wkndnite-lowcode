@@ -84,7 +84,7 @@ const props = defineProps({
   },
 });
 
-const avatar = ref('https://blog.wkndnite-tech.cn/avatar.png');
+const avatar = ref('https://blog.wkndnite-tech.cn/avatar.jpg');
 
 const resetQuestionnaire = () => {
   ElMessageBox.confirm('确定要重置问卷吗？', '提示', {
